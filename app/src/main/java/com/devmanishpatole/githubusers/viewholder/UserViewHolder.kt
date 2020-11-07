@@ -9,7 +9,7 @@ import com.devmanishpatole.githubusers.R
 import com.devmanishpatole.githubusers.base.BaseItemViewHolder
 import com.devmanishpatole.githubusers.model.GitHubUser
 import com.devmanishpatole.githubusers.util.load
-import com.devmanishpatole.githubusers.viewmodel.GitHugUserItemViewModel
+import com.devmanishpatole.githubusers.viewmodel.GitHubUserItemViewModel
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
@@ -18,11 +18,11 @@ import dagger.hilt.android.internal.managers.ViewComponentManager
 import kotlinx.android.synthetic.main.row_user.view.*
 
 class UserViewHolder(parent: ViewGroup, private val onItemClick: (Int) -> Unit) :
-    BaseItemViewHolder<GitHubUser, GitHugUserItemViewModel>(R.layout.row_user, parent) {
+    BaseItemViewHolder<GitHubUser, GitHubUserItemViewModel>(R.layout.row_user, parent) {
 
     override lateinit var lifecycleRegistry: LifecycleRegistry
 
-    override lateinit var viewModel: GitHugUserItemViewModel
+    override lateinit var viewModel: GitHubUserItemViewModel
 
     override fun setupView(view: View) {
         // No Implementation
@@ -45,10 +45,10 @@ class UserViewHolder(parent: ViewGroup, private val onItemClick: (Int) -> Unit) 
     @InstallIn(FragmentComponent::class)
     @EntryPoint
     interface ProviderUserItemViewModel {
-        fun userItemViewModel(): GitHugUserItemViewModel
+        fun userItemViewModel(): GitHubUserItemViewModel
     }
 
-    private fun getUserItemViewModel(fragment: Fragment): GitHugUserItemViewModel {
+    private fun getUserItemViewModel(fragment: Fragment): GitHubUserItemViewModel {
         val hiltEntryPoint = EntryPointAccessors.fromFragment(
             fragment, ProviderUserItemViewModel::class.java
         )

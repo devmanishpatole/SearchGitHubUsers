@@ -9,4 +9,4 @@ import javax.inject.Inject
  * Each GitHubUser row has it's own viewModel to handle business logic.
  * No need to delegate operation to main view model.
  */
-class GitHugUserItemViewModel @Inject constructor() : BaseItemViewModel<GitHubUser>()
+class GitHubUserItemViewModel @Inject constructor() : BaseItemViewModel<GitHubUser>()

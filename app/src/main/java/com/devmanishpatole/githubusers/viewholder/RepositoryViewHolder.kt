@@ -41,7 +41,7 @@ class RepositoryViewHolder(parent: ViewGroup) :
         fun repositoryItemViewModel(): RepositoryItemViewModel
     }
 
-    private fun getUserItemViewModel(fragment: Fragment): RepositoryItemViewModel {
+    private fun getRepositoryItemViewModel(fragment: Fragment): RepositoryItemViewModel {
         val hiltEntryPoint = EntryPointAccessors.fromFragment(
             fragment, ProviderRepositoryItemViewModel::class.java
         )
@@ -51,7 +51,7 @@ class RepositoryViewHolder(parent: ViewGroup) :
     override fun injectDependency() {
         lifecycleRegistry = LifecycleRegistry(this)
         viewModel =
-            getUserItemViewModel((itemView.context as ViewComponentManager.FragmentContextWrapper).fragment)
+            getRepositoryItemViewModel((itemView.context as ViewComponentManager.FragmentContextWrapper).fragment)
     }
 
 }
