@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SectionLayout"
+    android:layout_margin="@dimen/spacing_small"
+    android:foreground="?attr/selectableItemBackground">
+
+    <RelativeLayout
+        style="@style/SectionLayout"
+        android:padding="@dimen/spacing_small">
+
+        <TextView
+            android:id="@+id/repoName"
+            style="@style/WrapContentLayout"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:textSize="@dimen/text_large"
+            tools:text="Repo Name" />
+
+        <TextView
+            android:id="@+id/repoDesc"
+            style="@style/WrapContentLayout"
+            android:layout_below="@id/repoName"
+            android:fontFamily="@font/poppin_font"
+            android:textSize="@dimen/text_small"
+            tools:text="Repo Description" />
+
+        <TextView
+            android:id="@+id/language"
+            style="@style/WrapContentLayout"
+            android:layout_below="@id/repoDesc"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/teal_200"
+            android:textSize="@dimen/text_medium"
+            tools:text="Kotlin" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

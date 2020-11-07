@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">GitHub Users</string>
+    <string name="search">Search</string>
+
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="no_user_found">No Users Found!</string>
+    <string name="welcome">Welcome!</string>
+    <string name="welcome_msg">GitHub user search made easy.\nNow you can search any GitHub user using this app and you can see user details.</string>
+    <string name="no_followers">No Followers</string>
+    <string name="no_repos">No Repositories</string>
+    <string name="repositories">Repositories</string>
+    <string name="followers">Followers</string>
+</resources>

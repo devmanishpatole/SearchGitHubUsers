@@ -1,0 +1,118 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "com.devmanishpatole.githubusers"
+        minSdkVersion rootProject.ext.min_sdk_version
+        targetSdkVersion rootProject.ext.target_sdk_version
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", "\"https://api.github.com/\"")
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "BASE_URL", "\"https://api.github.com/\"")
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    packagingOptions {
+        exclude 'META-INF/AL2.0'
+        exclude 'META-INF/LGPL2.1'
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:$app_compat_version"
+    implementation "androidx.core:core-ktx:$core_ktx_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_version"
+
+    // Networking
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+
+    // CardView
+    implementation "androidx.cardview:cardview:$support_library_version"
+
+    // Viewpager 2
+    implementation "androidx.viewpager2:viewpager2:$viewpager_version"
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    // Lifecycle Annotations
+    implementation "androidx.appcompat:appcompat:$app_compat_version"
+    implementation "androidx.legacy:legacy-support-v4:$legacy_support_version"
+
+    // Dependency injection - Hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_view_model_version"
+    kapt "androidx.hilt:hilt-compiler:$hilt_view_model_version"
+
+    // Lifecycle extensions
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.activity:activity-ktx:$activity_ktx_vsersion"
+    implementation "androidx.fragment:fragment-ktx:$fragment_ktx_version"
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+
+    // Coroutine extensions
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutine_version"
+
+    implementation "androidx.recyclerview:recyclerview:$recycler_view_version"
+    implementation "com.google.android.material:material:$material_version"
+
+    // Navigation component
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    //Lottie
+    implementation "com.airbnb.android:lottie:$lottie_version"
+
+    //Paging
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    implementation "com.github.bumptech.glide:okhttp3-integration:$glide_okhttp_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+
+
+    // Testing
+    testImplementation "junit:junit:$junit_version"
+    testImplementation "org.robolectric:robolectric:$robolectric_version"
+    androidTestImplementation "androidx.test.ext:junit:$junit_ext_version"
+    testImplementation "android.arch.core:core-testing:$core_testing_version"
+    androidTestImplementation "androidx.test:core-ktx:$test_core_ktx_version"
+    testImplementation "io.mockk:mockk:$mockk_version"
+}

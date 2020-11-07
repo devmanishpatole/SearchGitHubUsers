@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SectionLayout"
+    android:layout_margin="@dimen/spacing_small"
+    android:foreground="?attr/selectableItemBackground">
+
+    <RelativeLayout
+        style="@style/SectionLayout"
+        android:padding="@dimen/spacing_small">
+
+        <ImageView
+            android:id="@+id/userImage"
+            android:layout_width="@dimen/image_height_width"
+            android:layout_height="@dimen/image_height_width"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/userName"
+            style="@style/WrapContentLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_toEndOf="@id/userImage"
+            android:fontFamily="@font/poppin_font"
+            android:textSize="@dimen/text_medium"
+            tools:text="Hello" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

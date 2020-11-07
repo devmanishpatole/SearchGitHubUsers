@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SectionLayout"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_small">
+
+    <TextView
+        android:id="@+id/error_msg"
+        style="@style/WrapContentLayout"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppin_font"
+        android:textAlignment="center"
+        android:textColor="?android:textColorPrimary"
+        tools:text="Timeout" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/WrapContentLayout"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/spacing_medium" />
+
+    <ImageView
+        android:id="@+id/retry_button"
+        style="@style/WrapContentLayout"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:src="@drawable/ic_refresh"
+        tools:ignore="ContentDescription" />
+</LinearLayout>
