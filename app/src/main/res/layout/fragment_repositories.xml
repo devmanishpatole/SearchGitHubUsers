@@ -1,0 +1,6 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchParentLayout"
+    android:padding="@dimen/spacing_small">
+
+    <include layout="@layout/list" />
+</RelativeLayout>

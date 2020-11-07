@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchParentLayout"
+    android:padding="@dimen/spacing_small">
+
+    <LinearLayout
+        android:id="@+id/intro"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/intro_height"
+        android:background="@drawable/welcome_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/WrapContentLayout"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="@string/welcome"
+            android:textSize="@dimen/text_extra_large" />
+
+        <TextView
+            style="@style/WrapContentLayout"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:paddingStart="@dimen/spacing_large"
+            android:paddingEnd="@dimen/spacing_large"
+            android:text="@string/welcome_msg" />
+
+    </LinearLayout>
+
+    <include layout="@layout/list" />
+
+</RelativeLayout>
