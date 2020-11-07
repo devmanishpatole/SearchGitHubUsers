@@ -8,10 +8,10 @@
 
 
 ## About
-Using application user can search GitHub users. Application loads data from [GitHub API](https://docs.github.com/en/free-pro-team@latest/rest/reference/users)
-The user can tap on the user which opens the next screen where users can see all the public repositories and all the followers of that user.
-The application supports the lazy loading of Users, repositories and followers, so users can have a seamless data loading experience. 
-Implemented Lifecycle aware view holder for image list which respects the lifecycle of row's view components.
+Using the application users can search GitHub users. Application loads data from [GitHub API](https://docs.github.com/en/free-pro-team@latest/rest/reference/users).
+The user gets the list of GitHub users after searching and then the user can tap on the GitHub user which opens the next screen where users can see all the public repositories and all the followers of that GitHub user.
+The application supports the lazy loading of Users, repositories, and followers, so users can have a seamless data loading experience.
+Implemented Lifecycle aware viewHolder for users list which respects the lifecycle of row's view components.
 
 
 ## Built With 
