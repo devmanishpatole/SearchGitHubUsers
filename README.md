@@ -26,7 +26,7 @@ Implemented Lifecycle aware viewHolder for users list which respects the lifecyc
 - [Navigation](https://developer.android.com/guide/navigation) - Navigation refers to the interactions that allow users to navigate across, into, and back out from the different pieces of content within your app.
     - [Safe args](https://developer.android.com/guide/navigation/navigation-pass-data#Safe-args) - Gradle plugin that provides type safety when navigating and passing data between destinations. 
 - [Paging 3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview) - The Paging Library helps you load and display pages of data from a larger dataset from local storage or over the network.
-- [ViewPager 2](https://developer.android.com/jetpack/androidx/releases/viewpager2) - ViewPager2 is an improved version of the ViewPager library.
+- [ViewPager 2](https://developer.android.com/jetpack/androidx/releases/viewpager2) - `ViewPager2` is an improved version of the `ViewPager` library.
 - [Retrofit](https://square.github.io/retrofit/) - A type-safe HTTP client for Android and Java.
 - [Material Components for Android](https://github.com/material-components/material-components-android) - Modular and customizable Material Design UI components for Android.
 - [Glide](https://github.com/bumptech/glide) - An image loading library for Android.
