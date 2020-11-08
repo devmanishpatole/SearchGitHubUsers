@@ -6,6 +6,9 @@ import com.devmanishpatole.githubusers.model.GitHubUser
 import com.devmanishpatole.githubusers.model.RepositoryItem
 import javax.inject.Singleton
 
+/**
+ * Repository for Git operations.
+ */
 @Singleton
 interface GitHubPagingRepository {
     /**
