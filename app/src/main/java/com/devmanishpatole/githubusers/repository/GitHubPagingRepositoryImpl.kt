@@ -11,11 +11,18 @@ import com.devmanishpatole.githubusers.service.GitHubService
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
+/**
+ * Git repository implementation with Paging3.
+ */
 class GitHubPagingRepositoryImpl @Inject constructor(
     private val service: GitHubService,
     @ApplicationContext private val context: Context
 ) : GitHubPagingRepository {
 
+    /**
+     * Fetches users.
+     * @param name to search using UserSource
+     */
     override fun getUsers(name: String) = Pager(
         config = PagingConfig(
             pageSize = PAGE_SIZE,
@@ -26,6 +33,10 @@ class GitHubPagingRepositoryImpl @Inject constructor(
         }
     ).liveData
 
+    /**
+     * Fetches followers.
+     *  @param name to search using FollowersSource
+     */
     override fun getFollowers(name: String) = Pager(
         config = PagingConfig(
             pageSize = PAGE_SIZE,
@@ -36,6 +47,10 @@ class GitHubPagingRepositoryImpl @Inject constructor(
         }
     ).liveData
 
+    /**
+     * Fetches public repositories.
+     *  @param name to search using RepositorySource
+     */
     override fun getRepositories(name: String) = Pager(
         config = PagingConfig(
             pageSize = PAGE_SIZE,

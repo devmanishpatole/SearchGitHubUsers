@@ -5,7 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.devmanishpatole.githubusers.util.Result
 
-
+/**
+ * Base class for ViewModel.
+ */
 abstract class BaseViewModel : ViewModel() {
 
     private val _messageStringId: MutableLiveData<Result<Int>> = MutableLiveData()

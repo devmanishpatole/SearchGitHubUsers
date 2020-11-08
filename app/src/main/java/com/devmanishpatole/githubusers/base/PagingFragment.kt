@@ -8,7 +8,10 @@ import com.devmanishpatole.githubusers.R
 import com.devmanishpatole.githubusers.adapter.UserLoadStateAdapter
 import com.devmanishpatole.githubusers.exception.NetworkException
 
-
+/**
+ * Abstract layer for paging fragment.
+ * Extracted logic of list initialisation and loading state listeners.
+ */
 abstract class PagingFragment<VM : BaseViewModel, T : Any, VH : BaseItemViewHolder<T, out BaseItemViewModel<T>>> :
     BaseFragment<VM>() {
 
