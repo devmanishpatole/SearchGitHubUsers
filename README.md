@@ -1,4 +1,4 @@
-![photo](media/poster.png)
+![photo](media/git_poster.gif)
 
 # GitHub Search User Application
 
