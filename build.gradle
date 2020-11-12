@@ -72,7 +72,7 @@ ext {
     //Paging
     paging_version = '3.0.0-alpha09'
 
-    // Coild
+    // Coil
     coil_version = '1.0.0'
 
     // Tests
