@@ -2,12 +2,10 @@ package com.devmanishpatole.githubusers.util
 
 import android.util.Log
 import android.view.View
-import android.widget.ImageView
 import androidx.navigation.NavController
 import androidx.navigation.NavDirections
 import androidx.navigation.NavOptions
 import com.devmanishpatole.githubusers.R
-import com.devmanishpatole.githubusers.service.GlideApp
 
 fun View.hide() {
     this.visibility = View.GONE
@@ -36,19 +34,3 @@ fun NavController.navigateWithAnim(directions: NavDirections) {
         Log.e("NavController", "Multiple navigation attempts handled ${e.message}")
     }
 }
-
-fun ImageView.load(
-    url: String,
-    placeholder: Int = R.drawable.placeholder,
-    error: Int = R.drawable.image_not_available
-) {
-    GlideApp
-        .with(this)
-        .load(url)
-        .centerCrop()
-        .placeholder(placeholder)
-        .error(error)
-        .into(this)
-}
-
-
