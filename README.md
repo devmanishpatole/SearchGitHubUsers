@@ -29,7 +29,7 @@ Implemented Lifecycle aware viewHolder for users list which respects the lifecyc
 - [ViewPager 2](https://developer.android.com/jetpack/androidx/releases/viewpager2) - `ViewPager2` is an improved version of the `ViewPager` library.
 - [Retrofit](https://square.github.io/retrofit/) - A type-safe HTTP client for Android and Java.
 - [Material Components for Android](https://github.com/material-components/material-components-android) - Modular and customizable Material Design UI components for Android.
-- [Glide](https://github.com/bumptech/glide) - An image loading library for Android.
+- [Coil](https://coil-kt.github.io/coil/) - An image loading library for Android backed by Kotlin Coroutines.
 
 
 

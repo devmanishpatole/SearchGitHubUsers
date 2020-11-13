@@ -5,10 +5,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleRegistry
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
+import coil.size.Scale
 import com.devmanishpatole.githubusers.R
 import com.devmanishpatole.githubusers.base.BaseItemViewHolder
 import com.devmanishpatole.githubusers.model.GitHubUser
-import com.devmanishpatole.githubusers.util.load
 import com.devmanishpatole.githubusers.viewmodel.GitHubUserItemViewModel
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
@@ -31,7 +32,12 @@ class UserViewHolder(parent: ViewGroup, private val onItemClick: (Int) -> Unit) 
     override fun bind(data: GitHubUser) {
         super.bind(data)
         with(itemView) {
-            userImage.load(data.imageUrl)
+            userImage.load(data.imageUrl){
+                crossfade(true)
+                placeholder(R.drawable.placeholder)
+                error(R.drawable.image_not_available)
+                scale(Scale.FIT)
+            }
             userName.text = data.name
 
             setOnClickListener {
