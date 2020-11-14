@@ -8,13 +8,13 @@ import androidx.lifecycle.switchMap
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
 import com.devmanishpatole.githubusers.base.BaseViewModel
-import com.devmanishpatole.githubusers.repository.GitHubPagingRepositoryImpl
+import com.devmanishpatole.githubusers.repository.GitHubPagingRepository
 
 /**
  * Class helps searching GitHub users.
  */
 class SearchViewModel @ViewModelInject constructor(
-    private val repository: GitHubPagingRepositoryImpl,
+    private val repository: GitHubPagingRepository,
     @Assisted state: SavedStateHandle
 ) : BaseViewModel() {
 
