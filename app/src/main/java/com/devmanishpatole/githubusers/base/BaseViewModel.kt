@@ -10,11 +10,11 @@ import com.devmanishpatole.githubusers.util.Result
  */
 abstract class BaseViewModel : ViewModel() {
 
-    private val _messageStringId: MutableLiveData<Result<Int>> = MutableLiveData()
+    protected val _messageStringId: MutableLiveData<Result<Int>> = MutableLiveData()
     val messageStringId: LiveData<Result<Int>>
         get() = _messageStringId
 
-    private val _messageString: MutableLiveData<Result<String>> = MutableLiveData()
+    protected val _messageString: MutableLiveData<Result<String>> = MutableLiveData()
     val messageString: LiveData<Result<String>>
         get() = _messageString
 
