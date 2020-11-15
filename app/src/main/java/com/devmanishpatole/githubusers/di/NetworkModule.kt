@@ -1,8 +1,8 @@
 package com.devmanishpatole.githubusers.di
 
 import android.content.Context
-import com.devmanishpatole.githubusers.network.Networking
 import com.devmanishpatole.githubusers.BuildConfig
+import com.devmanishpatole.githubusers.network.Networking
 import com.devmanishpatole.githubusers.service.GitHubService
 import dagger.Module
 import dagger.Provides
@@ -22,9 +22,7 @@ object NetworkModule {
     private const val ACCEPT = "Accept"
     private const val ACCEPT_VALUE = "application/vnd.github.v3+json"
 
-    @Provides
-    @Singleton
-    fun provideInterceptor() = object : Interceptor {
+    private fun getInterceptor() = object : Interceptor {
         override fun intercept(chain: Interceptor.Chain): Response {
             val original = chain.request()
             val request = original.newBuilder()
@@ -37,9 +35,7 @@ object NetworkModule {
         }
     }
 
-    @Provides
-    @Singleton
-    fun provideLoggingInterceptor() = HttpLoggingInterceptor()
+    private fun getLoggingInterceptor() = HttpLoggingInterceptor()
         .apply {
             level = if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY
             else HttpLoggingInterceptor.Level.NONE
@@ -48,16 +44,14 @@ object NetworkModule {
     @Provides
     @Singleton
     fun provideNetwork(
-        @ApplicationContext appContext: Context,
-        loggingInterceptor: HttpLoggingInterceptor,
-        interceptor: Interceptor
+        @ApplicationContext appContext: Context
     ): Retrofit =
         Networking.create(
             BuildConfig.BASE_URL,
             appContext.cacheDir,
             10 * 1024 * 1024, // 10MB
-            loggingInterceptor,
-            interceptor
+            getLoggingInterceptor(),
+            getInterceptor()
         )
 
     @Provides

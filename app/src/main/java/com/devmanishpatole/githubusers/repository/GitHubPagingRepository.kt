@@ -9,7 +9,6 @@ import javax.inject.Singleton
 /**
  * Repository for Git operations.
  */
-@Singleton
 interface GitHubPagingRepository {
     /**
      * Return GitHub users
